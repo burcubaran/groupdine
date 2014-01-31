@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+   
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+ 
+    <title>Starter Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {background-image: url(/static/back.jpg) ;
+        margin:2;
+        
+	  }
+h1 {font-family: 'Courgette', cursive;
+       font-weight: 400;
+       font-size:70px;
+       }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="static/css/starter-template.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA-6uEM4IUT75-FSCHQQHxvjvocwLy_FS8&sensor=true">
+</script>
+
+<script type="text/javascript">
+
+function initialize()
+{
+            
+var myCenter=new google.maps.LatLng({{latlong[0][0]}},{{latlong[0][1]}})
+var mapProp = {
+  center:myCenter,
+  zoom:13,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var i=1
+{% for x in latlong %}
+
+var image = 'http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld='+i+'|FE6256|000000';
+console.log(image)
+var marker=new google.maps.Marker({
+position: new google.maps.LatLng({{x[0]}},{{x[1]}}),
+map: map, 
+icon:image,});
+i++;
+   
+{% endfor %} }
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+</script>
+       
+  
+  
+  
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="starter-template">
+      <h1> <span style="color:#FF69B4">{{categ}}</span>
+     </h1>
+      <p class="lead"></p>
+    </div>
+
+  </div>
+  
+ 
+  <div> 
+    
+    {% for rest in final %}
+  <p></p>
+  <p><h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  
+ 
+<span style="color:#FFB2B2"> {{final.index(rest)+1}}.
+ {{rest}} ({{dicadd[rest]}}) {% if dicrank[rest]==5 %} <img src="\static\star5.jpg" width="130px">
+                              {% elif dicrank[rest]==4.5 %} <img src="\static\star45.jpg" width="130px">
+                              {% elif dicrank[rest]==4 %} <img src="\static\star4.jpg" width="130px">
+                              {% elif dicrank[rest]==3.5 %} <img src="\static\star35.jpg" width="130px">
+                              {% elif dicrank[rest]==3 %} <img src="\static\star3.jpg"width="130px" >
+ {% endif %}        
+        </h2>
+    </p>
+     <!-- Modal -->
+   <!-- <div class="modal fade" id="modal{{loop.index}}" tabindex="-1" role="dialog" aria-labelledby="{{rest}}" 
+aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="{{loop.index}}">Info:</h4>
+          </div>
+          <div class="modal-body">
+            <div>
+        <h4>  <b>  Yelp Rank: </b>{{dicrank[rest]}} <br></h4>
+        <h4></h4>
+        <h4>  <b>  Address: </b> {{dicadd[rest]}} </h4>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal -->-->
+    
+    
+    
+    
+    
+    
+    
+    </br></br></br></br>
+      <p>
+  <center>         {% for foto in fotos[rest] %} 
+<img src="{{foto}}" width="275px" height="260" alt="" title="" style="border:2px solid white" /> 
+            {%- endfor %} </center>
+            </p>
+  </br></br></br>
+    {% endfor %}
+<center>
+
+<div id="googleMap" style="width:600px;height:400px;border:4px solid black""></div>
+
+</center> 
+	
+	
+
+   <!-- Bootstrap core JavaScript
+   ================================================== -->
+   <!-- Placed at the end of the document so the pages load faster -->
+   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+   <script src="static/js/bootstrap.min.js"></script>
+  
+   <script type="text/javascript">
+     $('.restaurant-button').click(function() {
+       var id = $(this).data('id');
+       
+       $('#modal' + id).modal();
+     });
+   </script>
+   
+  
+</body>
+
+</html>
