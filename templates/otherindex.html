@@ -7,7 +7,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
    <meta name="description" content="">
-   
+   <meta name="author" content="">
 
    <title>GroupDine</title>
 
@@ -16,7 +16,7 @@
    <link href="static/css/bootstrap.css" rel="stylesheet">
    <style>
    body {
-      background-image: url(/static/6913bb.jpg) ;
+      background-image: url(/static/back.jpg) ;
       background-size: 100%;
       background-origin: content;
       background-repeat: no-repeat;
@@ -31,6 +31,8 @@
       </style>
    <!-- Custom styles for this template -->
    <link href="static/css/starter-template.css" rel="stylesheet">
+   
+   
 
 
    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,8 +52,7 @@
        <div class="navbar-header" >
          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
            <span class="sr-only" >Toggle navigation</span>
-           <span class="icon-bar">
-   <meta name="author" content=""></span>
+           <span class="icon-bar"></span>
            <span class="icon-bar"></span>
            <span class="icon-bar"></span>
          </button>
@@ -71,22 +72,20 @@
 
 
      <div class="starter-template" ">
-    
+   <table>
+   <tr> 
   
-  <br> </br> 
- <br> </br>
-  <br> </br>
-  <br> </br>
-     <br> </br>
+  <h3><span style="color:white">Enter the names of your favorite restaurants separated by a comma.<br></br>
+  </span></h3>
 
-<table> <tr>
- <h2> <form class="form-large" action="search.html" method="GET">
+
+ <h2> <form class="form-large" action="othersearch.html" method="GET">
  
   </br> </br>
-  <center> <input type="text" class="input-large search-query" size=30 name="q" placeholder="Instagram usernames"></h2>
+  <center> <input type="text" class="input-large search-query" size=30 name="q1" placeholder="Restaurant names"></h2>
   
  <br><h2>
- <select class="selectpicker" name='Location'>
+ <select class="selectpicker" name='Location1'>
 <option value="Berkeley" >Berkeley</option>
 <option value="Cupertino" >Cupertino</option>
 <option value="Daly City">Daly City</option>
@@ -107,12 +106,7 @@
   <br><h2><button type="submit" class="btn btn-success" style="background-color:#FFB2B2"><span style="color:black">Search
   </span></button> 
  </h2> 
- </br>
-
- </center>  
-  <center>
-   </center>
-  
+ </center>  <!--</td>&nbsp<td> </td>&nbsp <td> </td><td> </td> <td> </tr> </table>  -->
  <h2>
  {% with errors = get_flashed_messages() %}
         {% if errors %}
@@ -123,28 +117,8 @@
 {% endwith %}
  
  </h2>
- 
  </form> 
- 
- 
-  </div>
-   <div>
-
-	</div> 
-	</tr> <tr>
-</br>
-<center>
- <h4> <a href="/otherindex.html"> <span style="color:#FFB2B2">If you do not have Instagram usernames,<br>
- you can still get restaurant suggestions.<br> Click here.
-  </a> </span></h4></center>
-  
-  </tr> </table>
-
-
-   <!-- Bootstrap core JavaScript
-   ================================================== -->
-   <!-- Placed at the end of the document so the pages load faster -->
-   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-   <script src="static/js/bootstrap.min.js"></script>
+</tr> <tr> </br> </br> </br> </br>
+<a href="/#"> <span style="color:#FFB2B2"> Back to homepage</span> </a> </tr>
  </body>
 </html>
