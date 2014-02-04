@@ -176,25 +176,20 @@ def search():
     
     try:
         
-        if datalist==['burcirain', ' susandedwards', ' patrickkriske'] and y=='Palo Alto':
-            final=['Cafe Renzo', 'Spalti Ristorante', 'Osteria', 'La Boulange de Palo Alto', 
-            'Anatolian Kitchen', 'Figo', 'Buca di Beppo', 'Vero', 'Cafe Pro Bono']
+        if datalist==['burcirain', ' susanded'] and y=='Palo Alto':
+            final=['Cafe Renzo', 'Spalti Ristorante', 'Osteria', 'La Boulange de Palo Alto']
             fotos={}
             fotos['Cafe Renzo']=[u'http://distilleryimage5.s3.amazonaws.com/8a317d728bca11e3869d0edc48bc0135_8.jpg', u'http://distilleryimage3.s3.amazonaws.com/4d4201b28bc411e392771260b9cfad3f_8.jpg', 
             u'http://distilleryimage4.s3.amazonaws.com/c7898b588bb911e385020e36ca40396c_8.jpg', u'http://distilleryimage10.s3.amazonaws.com/88e2b5008a3311e395d30ec7201e8182_8.jpg', 
             u'http://distilleryimage4.s3.amazonaws.com/0b7f884a86f511e38daf128b59e5366c_8.jpg', u'http://distilleryimage1.s3.amazonaws.com/2ac9aa6c853a11e3aadb12a9e9ef6499_8.jpg', 
             u'http://distilleryimage4.s3.amazonaws.com/2c8e66aa81a011e3a1af1240519874ac_8.jpg', u'http://distilleryimage9.s3.amazonaws.com/17f114a4808d11e3918e12a55282bfd1_8.jpg', 
             u'http://distilleryimage3.s3.amazonaws.com/3a5b0d787cce11e3aa1d12fe49d61113_8.jpg', u'http://distilleryimage1.s3.amazonaws.com/a94ea5c07b4111e38fb612064f8bfb61_8.jpg', 
-            u'http://distilleryimage11.s3.amazonaws.com/217276127a7f11e3942f0e12bda11337_8.jpg', u'http://distilleryimage1.s3.amazonaws.com/ac33827c75c111e384c90e6362b12419_8.jpg', 
-            u'http://distilleryimage2.s3.amazonaws.com/0bfd0d04755411e3944b126a49f9c5ea_8.jpg', u'http://distilleryimage9.s3.amazonaws.com/07291648711611e3a67012a543942229_8.jpg', 
-            u'http://distilleryimage1.s3.amazonaws.com/bad8983c6ac511e39972121de7c604a9_8.jpg']
+            ]
             fotos['Spalti Ristorante']=[u'http://distilleryimage0.s3.amazonaws.com/f2bc94e054c911e3a7221289dc87bf56_8.jpg', u'http://distilleryimage10.s3.amazonaws.com/d01bcd66532511e395f30ee24f92cc1c_8.jpg', 
             u'http://distilleryimage10.s3.amazonaws.com/bd0b0538442111e39d6822000a9e0849_8.jpg', u'http://distilleryimage8.s3.amazonaws.com/f4198b38264111e38d2722000a1f8fa0_7.jpg', 
             u'http://distilleryimage9.s3.amazonaws.com/0411ca6e255711e39d3b22000ab48194_7.jpg', u'http://distilleryimage4.s3.amazonaws.com/2daf2bfe15a911e39cc922000aaa090c_7.jpg', 
             u'http://distilleryimage4.s3.amazonaws.com/8f1fb1f6141411e3affb22000aa8059e_7.jpg', u'http://distilleryimage7.s3.amazonaws.com/488c3f58e13711e2b95c22000a1fb82f_7.jpg', 
-            u'http://distilleryimage7.s3.amazonaws.com/09336650cb3011e2a5d322000a1f90e5_7.jpg', u'http://distilleryimage1.s3.amazonaws.com/93e83b64cb2f11e2942f22000a9f140e_7.jpg', 
-            u'http://distilleryimage11.s3.amazonaws.com/48c52264cb2f11e2b8e322000a1f97ed_7.jpg', u'http://distilleryimage7.s3.amazonaws.com/114dcc1ecb2f11e2b45022000a1fb3cd_7.jpg', 
-            u'http://distilleryimage8.s3.amazonaws.com/88b236aea3e911e2a7ab22000a1f97eb_7.jpg']
+           ]
             fotos['Osteria']=[u'http://distilleryimage5.s3.amazonaws.com/5319322e8bd611e3af8f0a64691e8e35_8.jpg', u'http://distilleryimage3.s3.amazonaws.com/31bb95bc84b611e3a28312f1f4f91bb3_8.jpg', 
             u'http://distilleryimage2.s3.amazonaws.com/076046d679bd11e3865612ea7aa1741a_8.jpg', u'http://distilleryimage0.s3.amazonaws.com/84607ee46e6e11e38e3512dccb63aae0_8.jpg', 
             u'http://distilleryimage11.s3.amazonaws.com/6afa45f250c311e3b969129a442661d0_8.jpg', u'http://distilleryimage0.s3.amazonaws.com/bff9dc744cdc11e3b5f8122668b8a817_8.jpg', 
@@ -205,24 +200,7 @@ def search():
             u'http://distilleryimage9.s3.amazonaws.com/ae21609c861811e3814a126964918fbd_8.jpg', u'http://distilleryimage4.s3.amazonaws.com/8575b49a855f11e3a32d0e1cd8043a34_8.jpg', 
             u'http://distilleryimage8.s3.amazonaws.com/39b6c0e4855f11e3b8d31266326ae0f4_8.jpg', u'http://distilleryimage7.s3.amazonaws.com/ee1d68b8823911e3827112c757068f8f_8.jpg', 
             u'http://distilleryimage3.s3.amazonaws.com/a83256f6816211e39f720ea5d06e9e4f_8.jpg']
-            fotos['Anatolian Kitchen']=[u'http://distilleryimage0.s3.amazonaws.com/f84564b085f611e38d560ae46bbde460_8.jpg', u'http://distilleryimage5.s3.amazonaws.com/9444e1d485f611e3b2f70a3cc63667c9_8.jpg', 
-            u'http://distilleryimage4.s3.amazonaws.com/0f2e42907da611e39dfb0ac1ed5599c8_8.jpg', u'http://distilleryimage0.s3.amazonaws.com/7010a622728711e3a5840ee091584d74_8.jpg', 
-            u'http://distilleryimage11.s3.amazonaws.com/61d5ae62660311e3af811264ebd95973_8.jpg', u'http://distilleryimage0.s3.amazonaws.com/7162dfaa50cb11e38c8c12afb5ad8ea8_8.jpg', 
-            u'http://distilleryimage8.s3.amazonaws.com/aa48d6844e7911e38bb80e51820b3fe3_8.jpg', u'http://distilleryimage5.s3.amazonaws.com/750acbcc498c11e380340aca97abc920_8.jpg', 
-            u'http://distilleryimage9.s3.amazonaws.com/6db8b4ce443211e3838b22000ae81190_8.jpg']
-            fotos['Figo']=[u'http://distilleryimage1.s3.amazonaws.com/4738b4f475b311e3967d12870ef6b5bd_8.jpg', u'http://distilleryimage7.s3.amazonaws.com/c486c6086f7811e398f612f9a6a6a72b_8.jpg', 
-            u'http://distilleryimage10.s3.amazonaws.com/6a72135c677b11e3838512aaa8e0901e_8.jpg', u'http://distilleryimage8.s3.amazonaws.com/8db315a65e0b11e394581252b655b151_8.jpg', 
-            u'http://distilleryimage11.s3.amazonaws.com/e5e4b5f0595f11e3b45c12bc0078aa9b_7.jpg', u'http://distilleryimage5.s3.amazonaws.com/7553b732573411e3b76a12ffea774e9e_8.jpg', 
-            u'http://distilleryimage10.s3.amazonaws.com/a129051c46a211e3a56722000a1f9d88_8.jpg']
-            fotos['Buca di Beppo']=[u'http://distilleryimage1.s3.amazonaws.com/5e940e16889411e386ba1297a24481bd_8.jpg', u'http://distilleryimage3.s3.amazonaws.com/85e38e4486d511e3ae9a1228b1086cfb_8.jpg', 
-            u'http://distilleryimage0.s3.amazonaws.com/6b3555a2864711e3b89912c4abc13674_8.jpg', u'http://distilleryimage6.s3.amazonaws.com/b3d5041a862911e399040e1b15b34746_8.jpg', 
-            u'http://distilleryimage6.s3.amazonaws.com/3c85006e857411e3840012be65616916_8.jpg', u'http://distilleryimage1.s3.amazonaws.com/eecea7b0832711e3984e123939604885_8.jpg']
-            fotos['Vero']=[u'http://distilleryimage7.s3.amazonaws.com/26921800387611e3993f22000a9e0af5_8.jpg', u'http://distilleryimage4.s3.amazonaws.com/a446b69212b111e3998822000a1fbc5d_7.jpg', 
-            u'http://distilleryimage10.s3.amazonaws.com/6f8220e2fcb111e2983d22000a9f199e_7.jpg', u'http://distilleryimage3.s3.amazonaws.com/32f98a94f67511e2984322000a1fcb7e_7.jpg', 
-            u'http://distilleryimage8.s3.amazonaws.com/f691fbaccff711e2b34b22000aaa2162_7.jpg', u'http://distilleryimage1.s3.amazonaws.com/0945aff2cff611e2b70422000a9d0df6_7.jpg']
-            fotos['Cafe Pro Bono']=[u'http://distilleryimage8.s3.amazonaws.com/23554aa6855411e387d60e2e8d5fc624_8.jpg', u'http://distilleryimage6.s3.amazonaws.com/7a00004e80cc11e39edc0e8f330c44ee_8.jpg', 
-            u'http://distilleryimage9.s3.amazonaws.com/b6dcceea6ad611e3849212fc2fd3be6d_8.jpg', u'http://distilleryimage5.s3.amazonaws.com/f08070bc33b211e3969322000a1fc655_8.jpg', 
-            u'http://distilleryimage11.s3.amazonaws.com/59b7c0be33b111e3ae8022000a1fc41a_8.jpg']
+            
             
         
         elif datalist==['susandedwards', ' patrickkriske'] and y=='Palo Alto':
