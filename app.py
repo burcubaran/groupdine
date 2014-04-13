@@ -15,11 +15,9 @@ import MySQLdb as mdb
 
 
 import getlocations
-from getlocations import *
 import restsuggestions
-from restsuggestions import *
 import takefoto
-from takefoto import *
+
 
 #initialization
 app=Flask(__name__)
